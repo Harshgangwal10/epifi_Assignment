@@ -1,6 +1,18 @@
-node_modules
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Env / secrets
 .env
+
+# Logs
 npm-debug.log
+
+# OS files
 .DS_Store
-distgit 
-build
+
+# Build outputs (if generated)
+build/
+dist/
+
+

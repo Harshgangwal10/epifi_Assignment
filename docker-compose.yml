@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - CORS_ORIGIN=*
+      # Set these in an .env file or override them here
+      - MONGODB_URI=${MONGODB_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN:-7d}
+      - ABOUT_NAME=${ABOUT_NAME:-Notes API}
+      - ABOUT_EMAIL=${ABOUT_EMAIL:-notes@example.com}
+    restart: unless-stopped
