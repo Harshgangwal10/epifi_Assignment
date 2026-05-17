@@ -19,9 +19,9 @@ app.get("/", (_req, res) => {
   });
 });
 
-app.use(authRoutes);
-app.use(noteRoutes);
-app.use(miscRoutes);
+app.use("/", miscRoutes);
+app.use("/", authRoutes);
+app.use("/notes", noteRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

@@ -7,16 +7,18 @@ const router = express.Router();
 
 router.use(authenticate);
 
-router.get("/notes", noteController.getNotes);
-router.get("/search", noteController.searchNotes);
-router.post("/notes", noteController.createNote);
-router.get("/notes/:id", noteController.getNoteById);
-router.put("/notes/:id", noteController.updateNote);
-router.delete("/notes/:id", noteController.deleteNote);
-router.post("/notes/:id/share", noteController.shareNote);
-router.post("/notes/:id/pin", noteController.pinNote);
-router.post("/notes/:id/unpin", noteController.unpinNote);
+router.get("/", noteController.getNotes);
+router.post("/", noteController.createNote);
 
+router.get("/:id", noteController.getNoteById);
+router.put("/:id", noteController.updateNote);
+router.delete("/:id", noteController.deleteNote);
+
+router.post("/:id/share", noteController.shareNote);
+router.post("/:id/pin", noteController.pinNote);
+router.post("/:id/unpin", noteController.unpinNote);
+
+router.get("/search", noteController.searchNotes);
 
 export default router;
 
