@@ -4,8 +4,8 @@ const getOpenApi = (_req, res, openApiDocument) => {
 
 const about = (_req, res) => {
   res.status(200).json({
-    name: process.env.ABOUT_NAME || "Harsh",
-    email: process.env.ABOUT_EMAIL || "harsh@example.com",
+    name: process.env.ABOUT_NAME || "Harsh Gangwal",
+    email: process.env.ABOUT_EMAIL || "harshgangwal24@gmail.com",
     "my features": {
       "Full-text search":
         "GET /search?q=keyword lets users quickly find their own notes by title or content, which is essential once a notes app grows beyond a few entries.",
@@ -14,7 +14,7 @@ const about = (_req, res) => {
       "Secure sharing":
         "Shared notes are readable by recipients through GET /notes/{id}, while only the original owner can edit, delete, or reshare the note.",
       "Pin notes":
-        "POST /notes/{id}/pin and POST /notes/{id}/unpin let users pin important notes; GET /notes sorts pinned notes to the top.",
+        "POST /notes/{id}/pin and POST /notes/{id}/unpin let users pin important notes; GET /notes sorts pinned notes to the top."
     },
   });
 };

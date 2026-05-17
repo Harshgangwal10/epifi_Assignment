@@ -158,7 +158,7 @@ export default {
         responses: { 200: { description: "Note unpinned" }, 404: { description: "Note not found" } },
       },
     },
-    "/search": {
+    "/notes/search": {
       get: {
         summary: "Search owned notes by keyword",
         security: [{ bearerAuth: [] }],

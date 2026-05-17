@@ -21,7 +21,8 @@ REST backend for a multi-user notes service.
 ## Extra (Optional / Stretch)
 
 - Pagination on `GET /notes` via `page` and `limit` query params (also returns pagination in `X-*` headers).
-- Full-text search: `GET /search?q=keyword`.
+- Full-text search: `GET /notes/search?q=keyword`.
+- Pin notes: `POST /notes/{id}/pin` and `POST /notes/{id}/unpin` (pinned notes appear first in `GET /notes`).
 
 ## Run Locally
 
